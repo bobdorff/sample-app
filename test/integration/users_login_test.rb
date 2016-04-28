@@ -8,6 +8,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_template 'sessions/new'
     assert_not flash.empty?
     get root_path
-    assert flash.empty?
+    assert flash.empty?, 'Flash is displayed after redirect'
   end
 end
